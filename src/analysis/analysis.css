@@ -1,0 +1,276 @@
+.fw-analysis {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/moon-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-analysis {
+  width: 100%;
+  max-width: 1270px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+
+.title-analysis {
+  margin: 0;
+  font-family: 'Popeye', sans-serif;
+  font-size: 35px;
+}
+
+.analysis-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;   /* make left and right same height */
+  width: 100%;
+  background-color: #D9D9D9;
+  border: 6px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-analysis {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+  min-height: 0;
+}
+
+.right-analysis {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+}
+
+.text-analysis {
+  background-color: #011821;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 auto;             /* grows to match right side height */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-analysis h2 {
+  margin: 0;
+  text-align: start;
+  font-family: 'Popeye', sans-serif;
+  letter-spacing: 1px;
+}
+
+.text-analysis p {
+  text-align: start;
+  margin: 0;
+}
+
+/* Trend row */
+.trend-analyse {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.trend-patterns {
+  background-color: #011821;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.trend-patterns h2 {
+  margin: 0;
+  text-align: start;
+  font-family: 'Popeye', sans-serif;
+  letter-spacing: 1px;
+}
+
+.top-right {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.liquidity,
+.honeypot,
+.suggested {
+  background-color: #011821;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.liquidity h2,
+.honeypot h2,
+.suggested h2 {
+  margin: 0;
+  text-align: start;
+  font-family: 'Popeye', sans-serif;
+  letter-spacing: 1px;
+}
+
+.lower-buttons-analysis {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttons-lower-side {
+  display: flex;
+  gap: 20px;
+}
+
+/* =========================
+   Pills Base + States
+   ========================= */
+.pill, .suggest-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Inactive (grey) */
+.inactive {
+  background-color: #7e7e7e; /* dark grey */
+  color: #b5b5b5;            /* lighter grey */
+}
+
+/* Sentiment active states */
+.bullish-active { background-color: #16a34a; color: #ffffff; } /* green */
+.bearish-active { background-color: #dc2626; color: #ffffff; } /* red   */
+
+/* Trend active states */
+.continue-active { background-color: #16a34a; color: #ffffff; } /* green */
+.reversal-active { background-color: #dc2626; color: #ffffff; } /* red   */
+
+/* Status pills (Liquidity / Honeypot) */
+.status-green { background-color: #16a34a; color: #ffffff; }
+.status-red   { background-color: #dc2626; color: #ffffff; }
+
+/* Suggested action active states */
+.rec-green-active  { background-color: #16a34a; color: #ffffff; } /* strong buy, buy */
+.rec-orange-active { background-color: #f59e0b; color: #ffffff; } /* neutral / do nothing */
+.rec-red-active    { background-color: #dc2626; color: #ffffff; } /* sell, strong sell */
+
+/* Sentiment group container */
+.bullbear {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.prev, .new, .share {
+   font-family: 'Popeye', sans-serif;
+    color: white;
+    font-size: 25px;
+    background: linear-gradient(to bottom, 
+        #D42310 0%, 
+        #D42310 50%, 
+        #C21300 50%, 
+        #C21300 100%);
+    padding: 15px 20px;
+    border: 3px solid black;  
+}
+
+.prev:hover, .new:hover, .share:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 #000;
+    background: linear-gradient(to bottom, 
+        #C21300 0%, 
+        #C21300 50%, 
+        #D42310 50%, 
+        #D42310 100%);
+    border: 3px solid black; 
+}
+
+@media (max-width: 1380px) {
+  .inner-analysis {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .analysis-overview {
+    flex-direction: column;
+  }
+
+  .left-analysis {
+    width: 100%;
+  }
+
+  .right-analysis {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .inner-analysis {
+    padding: 40px 20px;
+    gap: 10px;
+  }
+
+  .analysis-overview {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .left-analysis {
+    gap: 10px;
+  }
+
+  .right-analysis {
+    gap: 10px;
+  }
+
+  .trend-analyse {
+    gap: 10px;
+  }
+
+  .top-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-right {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .lower-buttons-analysis {
+    flex-direction: column;
+  }
+
+  .buttons-lower-side {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .trend-analyse {
+    flex-direction: column;
+  }
+}

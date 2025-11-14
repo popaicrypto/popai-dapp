@@ -1,0 +1,299 @@
+.fw-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url('/moon-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.inner-results {
+    width: 100%;
+    max-width: 870px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 400px;
+    gap: 20px;
+}
+
+.chart-title {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.chart-title h2 {
+    margin: 0;
+    font-family: 'Popeye', sans-serif;
+    font-size: 40px;
+}
+
+.results-image {
+    width: 100%;
+    border: 6px solid black;
+    border-radius: 10px;
+}
+
+.spinach {
+    position: absolute;
+    width: 150px;
+    left: 680px;
+    bottom: 150px;
+}
+
+.buttons-results {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 20px;
+}
+
+.popeye3 {
+     width: 500px;
+    position: absolute;
+    left: 270px;
+    bottom: 100px;
+    z-index: 1; 
+}
+
+.rec-buy,
+.rec-strong\ buy {
+  color: #22c55e;
+}
+
+.rec-sell,
+.rec-strong\ sell {
+  color: #ef4444;
+}
+
+.rec-neutral {
+  color: #f59e0b;
+}
+
+.analysis-btn, .share-btn {
+    font-family: 'Popeye', sans-serif;
+    color: white;
+    font-size: 25px;
+    background: linear-gradient(to bottom, 
+        #D42310 0%, 
+        #D42310 50%, 
+        #C21300 50%, 
+        #C21300 100%);
+    padding: 15px 20px;
+    border: 3px solid black; 
+}
+
+.analysis-btn:hover, .share-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 0 #000;
+    background: linear-gradient(to bottom, 
+        #C21300 0%, 
+        #C21300 50%, 
+        #D42310 50%, 
+        #D42310 100%);
+    border: 3px solid black; 
+}
+
+@media (max-width: 1700px) {
+    .popeye3 {
+        width: 500px;
+        position: absolute;
+        left: 200px;
+        bottom: 100px;
+        z-index: 1; 
+    }
+
+    .spinach {
+        position: absolute;
+        width: 150px;
+        left: 620px;
+        bottom: 150px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .popeye3 {
+        width: 500px;
+        position: absolute;
+        left: 160px;
+        bottom: 100px;
+        z-index: 1; 
+    }
+
+    .spinach {
+        position: absolute;
+        width: 150px;
+        left: 620px;
+        bottom: 150px;
+    }
+
+    .chart-predicted {
+        display: none;
+        color: white;
+    }
+
+    .chart-title {
+        justify-content: end;
+    }
+}
+
+@media (max-width: 1500px) {
+    .popeye3 {
+        width: 500px;
+        position: absolute;
+        left: 140px;
+        bottom: 100px;
+        z-index: 1; 
+    }
+
+    .spinach {
+        position: absolute;
+        width: 150px;
+        left: 550px;
+        bottom: 150px;
+    }
+
+    .chart-predicted {
+        display: none;
+    }
+
+    .chart-title {
+        justify-content: end;
+    }
+
+    .inner-results {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .popeye3 {
+        width: 500px;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        z-index: 1; 
+    }
+
+    .spinach {
+        position: absolute;
+        width: 150px;
+        left: 470px;
+        bottom: 150px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .popeye3 {
+        width: 440px;
+    }
+
+    .spinach {
+        position: absolute;
+        width: 130px;
+        left: 430px;
+        bottom: 150px;
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .popeye3 {
+        width: 380px;
+        bottom: 180px;
+    }
+
+    .spinach {
+        position: absolute;
+        width: 110px;
+        left: 380px;
+        bottom: 190px;
+    }
+
+    .inner-results h2 {
+        font-size: 28px;
+    }
+
+    .share-btn, .analysis-btn {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .inner-results {
+        padding-left: 20px; 
+        padding-right: 20px;
+        margin-left: 0;
+        margin-top: 00px;
+    }
+
+    .spinach {
+        display: none;
+    }
+
+    .popeye3 {
+        width: 380px;
+        bottom: 120px;
+    }
+}
+
+@media (max-width: 770px) {
+    .popeye3 {
+        width: 320px;
+        bottom: 180px;
+    }
+}
+
+@media (max-width: 650px) {
+    .popeye3 {
+        width: 280px;
+        bottom: 200px;
+    }
+}
+
+@media (max-width: 580px) {
+  /* raise these above popeye by giving them a stacking context */
+  .chart-title,
+  .results-image,
+  .buttons-results,
+  .chart-title h2 {
+    position: relative; /* does not move them */
+    z-index: 2;         /* above popeye */
+  }
+
+  .popeye3 {
+    width: 450px;
+    left: 0;
+    bottom: 200px;
+  }
+
+  .recommendation {
+    color: #FFFFFF;
+  }
+
+  .buttons-results {
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 503px) {
+    .popeye3 {
+        width: 400px;
+        bottom: 50px;
+        left: 0;
+    }
+}
+
+@media (max-width: 410px) {
+    .popeye3 {
+        width: 350px;
+        bottom: 50px;
+    }
+}
